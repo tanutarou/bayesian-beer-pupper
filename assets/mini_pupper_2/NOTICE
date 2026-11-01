@@ -1,0 +1,54 @@
+Robot model of Mini Pupper 2 (assets/mini_pupper_2/)
+====================================================
+
+The URDF files and the meshes/*.stl files in this directory are derived from mini_pupper_description
+(mini_pupper_2) in the Mini Pupper ROS 2 stack:
+
+  https://github.com/mangdangroboticsclub/mini_pupper_ros  (commit c3ad28ce3b368fce8c9eb11dca203332bc753a83)
+
+They are distributed under the Apache License, Version 2.0; a copy is in LICENSE in this directory.
+
+- meshes/*.stl: unmodified copies of the upstream meshes.
+- mini_pupper_2_tray*.urdf: modified. The xacro was expanded without ROS; the ros2_control and Gazebo tags and
+  the camera placeholder visual were removed; the mesh paths were made relative; the joint damping and friction
+  were reduced to 0.01 and 0.005; the body collision mesh was replaced by a box; and a tray (with a payload
+  link, bare, or with a cup or glass holder) was added. Each file starts with a comment stating this.
+
+The following files were made for this project and are covered by the MIT License in the repository root:
+free_glass.xml, meshes/glass_tube_free.obj, meshes/holder_tube_deep.obj, meshes/holder_tube_glass.obj.
+
+The upstream NOTICE file follows.
+
+=========================================================================
+==  NOTICE file corresponding to the section 4 d of                    ==
+==  the Apache License, Version 2.0,                                   ==
+==  in this case for the Mini Pupper ROS 2 distribution.               ==
+=========================================================================
+
+Mini Pupper ROS 2 Stack
+Copyright 2022-2026 MANGDANG TECHNOLOGY CO., LIMITED 
+www.mangdang.org
+
+This product includes software developed at
+MANGDANG TECHNOLOGY CO., LIMITED.
+
+-------------------------------------------------------------------------
+Third-Party Open Source Software Notices:
+-------------------------------------------------------------------------
+
+This product contains portions of software derived from the following 
+third-party projects, which are licensed under the Apache License 2.0:
+
+1. TurtleBot3
+   Copyright 2019 Open Source Robotics Foundation, Inc.
+   Originally developed by Darby Lim (ROBOTIS)
+
+2. Stanford Quadruped (https://github.com/stanfordroboticsclub/StanfordQuadruped)
+   Copyright (c) 2020 Nathan Kau
+   Portions of gait generation and kinematics algorithms
+
+3. Nav2 (Navigation 2)
+   Copyright (c) 2018 Intel Corporation
+   Portions of navigation and costmap configurations
+
+=========================================================================

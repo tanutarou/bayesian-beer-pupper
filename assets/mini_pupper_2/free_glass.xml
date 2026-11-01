@@ -1,0 +1,46 @@
+<mujoco model="free_glass">
+  <compiler meshdir="."/>
+  <asset><mesh name="tube" file="meshes/glass_tube_free.obj"/></asset>
+  <worldbody>
+    <body name="cup_bottom">
+      <freejoint/>
+      <inertial pos="0 0 0.0180" mass="0.0500" diaginertia="2e-5 2e-5 1.5e-5"/>
+      <geom type="mesh" mesh="tube" pos="0 0 0.0320" rgba="0.85 0.9 0.95 0.35" contype="0" conaffinity="0" group="1"/>
+      <geom type="cylinder" size="0.0250 0.001" pos="0 0 0.001" rgba="0.85 0.9 0.95 0.35" contype="0" conaffinity="0" group="1"/>
+      <geom type="cylinder" size="0.0250 0.002" pos="0 0 0.000" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0235 0.0000 0.0320" quat="1.00000 0 0 0.00000" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0370 0.0000 0.0170" quat="1.00000 0 0 0.00000" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0217 0.0090 0.0320" quat="0.98079 0 0 0.19509" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0342 0.0142 0.0170" quat="0.98079 0 0 0.19509" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0166 0.0166 0.0320" quat="0.92388 0 0 0.38268" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0262 0.0262 0.0170" quat="0.92388 0 0 0.38268" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0090 0.0217 0.0320" quat="0.83147 0 0 0.55557" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0142 0.0342 0.0170" quat="0.83147 0 0 0.55557" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0000 0.0235 0.0320" quat="0.70711 0 0 0.70711" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0000 0.0370 0.0170" quat="0.70711 0 0 0.70711" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0090 0.0217 0.0320" quat="0.55557 0 0 0.83147" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0142 0.0342 0.0170" quat="0.55557 0 0 0.83147" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0166 0.0166 0.0320" quat="0.38268 0 0 0.92388" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0262 0.0262 0.0170" quat="0.38268 0 0 0.92388" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0217 0.0090 0.0320" quat="0.19509 0 0 0.98079" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0342 0.0142 0.0170" quat="0.19509 0 0 0.98079" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0235 0.0000 0.0320" quat="0.00000 0 0 1.00000" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0370 0.0000 0.0170" quat="0.00000 0 0 1.00000" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0217 -0.0090 0.0320" quat="-0.19509 0 0 0.98079" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0342 -0.0142 0.0170" quat="-0.19509 0 0 0.98079" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0166 -0.0166 0.0320" quat="-0.38268 0 0 0.92388" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0262 -0.0262 0.0170" quat="-0.38268 0 0 0.92388" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0090 -0.0217 0.0320" quat="-0.55557 0 0 0.83147" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0142 -0.0342 0.0170" quat="-0.55557 0 0 0.83147" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="-0.0000 -0.0235 0.0320" quat="-0.70711 0 0 0.70711" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="-0.0000 -0.0370 0.0170" quat="-0.70711 0 0 0.70711" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0090 -0.0217 0.0320" quat="-0.83147 0 0 0.55557" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0142 -0.0342 0.0170" quat="-0.83147 0 0 0.55557" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0166 -0.0166 0.0320" quat="-0.92388 0 0 0.38268" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0262 -0.0262 0.0170" quat="-0.92388 0 0 0.38268" contype="2" conaffinity="2" group="3"/>
+      <geom type="box" size="0.0015 0.0050 0.0290" pos="0.0217 -0.0090 0.0320" quat="-0.98079 0 0 0.19509" contype="1" conaffinity="1" group="3" friction="0.5 0.005 0.0001"/>
+      <geom type="box" size="0.0150 0.0078 0.0450" pos="0.0342 -0.0142 0.0170" quat="-0.98079 0 0 0.19509" contype="2" conaffinity="2" group="3"/>
+      <geom type="cylinder" size="0.0520 0.0500" pos="0 0 -0.0480" contype="2" conaffinity="2" group="3"/>
+    </body>
+  </worldbody>
+</mujoco>

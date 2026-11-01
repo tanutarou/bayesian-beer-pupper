@@ -1,0 +1,37 @@
+[project]
+name = "bayesian-beer-pupper"
+version = "0.1.0"
+description = "A Mini Pupper 2 that estimates how much beer it carries, with uncertainty, and walks carefully enough not to spill it"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.11",
+    "genesis-world==1.4.5",
+    "rsl-rl-lib==5.5.2",
+    "tensorboard>=2.18",
+    "numpy>=2.0",
+]
+
+[tool.uv]
+# torch wheels with CUDA 12.8 (required for Blackwell GPUs such as RTX 50xx)
+index = [{ name = "pytorch-cu128", url = "https://download.pytorch.org/whl/cu128", explicit = true }]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pupper_waiter"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pupper_waiter"]

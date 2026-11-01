@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Bayesian Beer Pupper: training runs, recordings and local checkouts
+logs/
+videos/
+third_party/
