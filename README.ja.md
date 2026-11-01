@@ -6,6 +6,8 @@
 不確かさつきで量り、こぼさない速さで運びます。すべて [Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
 のシミュレーションで、ビールは MPM (Material Point Method) の液体です。
 
+[![デモ動画 (YouTube)](https://img.youtube.com/vi/2UFAhM5Yoyk/hqdefault.jpg)](https://www.youtube.com/watch?v=2UFAhM5Yoyk)
+
 - **歩く**: グラスを載せたまま速度指令に従って歩く方策を、強化学習 (PPO、[rsl_rl](https://github.com/leggedrobotics/rsl_rl)) で学習します。サーボは Mini Pupper 2 のスペック表に合わせた設定 (トルク上限 0.34 N·m、1 制御周期の遅れ) です。
 - **量る**: 立ったまま、サーボの沈みと負荷からビールの量を不確かさつきで推定します。
 - **運ぶ**: 推定の上側 90% percentile から歩く速さを決めます。満杯かもしれなければゆっくり運びます。

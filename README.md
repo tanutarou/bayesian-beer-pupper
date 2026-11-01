@@ -7,6 +7,8 @@ uncertainty, and walks slowly enough not to spill it. Everything runs in the
 [Genesis](https://github.com/Genesis-Embodied-AI/Genesis) simulator; the beer is an MPM (Material Point
 Method) liquid.
 
+[![Demo video (YouTube)](https://img.youtube.com/vi/2UFAhM5Yoyk/hqdefault.jpg)](https://www.youtube.com/watch?v=2UFAhM5Yoyk)
+
 - **Walk**: a walking policy that follows velocity commands with a glass on its back, trained with PPO
   ([rsl_rl](https://github.com/leggedrobotics/rsl_rl)). The servo settings follow the Mini Pupper 2 spec sheet
   (0.34 N·m torque limit, one control step of latency).
